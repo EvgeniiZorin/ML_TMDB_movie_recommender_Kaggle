@@ -14,3 +14,9 @@ Details:
 - Sort by similarity
 - Print out the top 5 closest movies
 - Try movies from other genres
+
+# Models
+
+- v1: recommendation based on vector similarity of query vector to vectors of other movies, with `overview` field processed by TF-IDF;
+- v2: v1 but with more TF-IDF - vectorised fields, e.g. title, keywords, etc.
+- v3: additionally incorporates numeric fields;
