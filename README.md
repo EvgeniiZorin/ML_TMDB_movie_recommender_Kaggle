@@ -17,6 +17,11 @@ Details:
 
 # Models
 
-- v1: recommendation based on vector similarity of query vector to vectors of other movies, with `overview` field processed by TF-IDF;
+These are my model architectures that, given a movie title, produce n=5 recommended movies that are in some way similar:
+
+- **v1: cosine similarity of TF-IDF descriptions**
+  - Take the title of a movie
+  - Get its description, process with TF-IDF
+  - Get recommendations based on close cosine similarity to other movies' TF-IDF - processed descriptions
 - v2: v1 but with more TF-IDF - vectorised fields, e.g. title, keywords, etc.
 - v3: additionally incorporates numeric fields;
