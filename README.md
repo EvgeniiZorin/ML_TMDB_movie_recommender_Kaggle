@@ -21,7 +21,8 @@ These are my model architectures that, given a movie title, produce n=5 recommen
 
 - **v1: cosine similarity of TF-IDF descriptions**
   - Take the title of a movie
-  - Get its description, process with TF-IDF
+  - Get its `overview` column, process with TF-IDF
   - Get recommendations based on close cosine similarity to other movies' TF-IDF - processed descriptions
-- v2: v1 but with more TF-IDF - vectorised fields, e.g. title, keywords, etc.
-- v3: additionally incorporates numeric fields;
+- **v2**: 
+  - v1 but using TF-IDF for combined field of `overview` + `title` + `tagline` + with more TF-IDF - vectorised fields, e.g. title, keywords, etc.
+- v3: additionally incorporates numeric fields, or incorporate columns like `genres`, `keywords`
